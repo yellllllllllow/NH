@@ -1,0 +1,50 @@
+============================================================
+1. 代理环境变量检查
+============================================================
+  - 无代理环境变量设置
+  - requests 将使用直接连接
+
+============================================================
+2. 系统代理设置 (Windows Registry)
+============================================================
+  Windows 系统代理: 未启用
+
+============================================================
+3. DNS 解析诊断
+============================================================
+  hacker-news.firebaseio.com          Hacker News API           IP: 34.120.160.131
+  feeds.arstechnica.com               Ars Technica RSS          IP: 18.244.214.23
+  www.technologyreview.com            MIT Tech Review           IP: 192.0.66.184
+  techcrunch.com                      TechCrunch RSS            IP: 192.0.66.220
+  www.wired.com                       Wired RSS                 IP: 104.18.2.159
+  www.reddit.com                      Reddit API                IP: 174.132.167.252
+  newsapi.org                         NewsAPI                   IP: 108.160.167.147
+  feeds.bbci.co.uk                    BBC RSS                   IP: 199.96.58.157
+  api.deepseek.com                    DeepSeek API              IP: 171.108.215.116
+
+============================================================
+4. HTTP 可达性测试 (timeout=8s, 直接连接)
+============================================================
+  [hacker_news_top     ] HTTP 200 (4501 bytes)
+  [hacker_news_item    ] HTTP 200 (164 bytes)
+  [ars_technica        ] HTTP 200 (78296 bytes)
+  [mit_tech_review     ] HTTP 200 (99787 bytes)
+  [techcrunch          ] HTTP 200 (17645 bytes)
+  [wired               ] HTTP 200 (45909 bytes)
+  [reddit              ] ERROR: 连接超时 (TCP connect)
+  [newsapi_no_key      ] ERROR: 连接超时 (TCP connect)
+  [deepseek_models     ] HTTP 401 (31 bytes)
+
+============================================================
+5. Python requests 代理自动检测
+============================================================
+  session.trust_env = False
+  requests默认读取 HTTP_PROXY/HTTPS_PROXY 环境变量
+  Windows 系统代理不会自动被 requests 使用
+  需要在代码中显式配置 proxies 参数或设置环境变量
+
+  修复方案: 在代码中添加代理支持
+  1. 设置环境变量: set HTTPS_PROXY=http://127.0.0.1:7890
+  2. 或在代码中传递 proxies={"https": "http://127.0.0.1:7890"}
+
+=== 诊断完成 ===

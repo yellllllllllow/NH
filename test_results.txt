@@ -1,0 +1,62 @@
+=== Test Results ===
+Sources loaded: 7
+
+[1/7] NewsAPI.org (newsapi)
+  URL: https://newsapi.org/v2/everything
+  Enabled: False
+  Time: 0.0s
+  Success: False
+  Error: NewsAPI 需要单独的 API Key（非 DeepSeek Key），请在新闻源管理中配置。
+  Articles: 0
+
+[2/7] MIT Technology Review (mit_tech_review)
+  URL: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+  Enabled: True
+  Time: 0.7s
+  Success: True
+  Error: 
+  Articles: 2
+    - Google DeepMind is worried about what happens when millions of agents start to i
+
+[3/7] Ars Technica (ars_technica)
+  URL: https://feeds.arstechnica.com/arstechnica/index
+  Enabled: True
+  Time: 0.8s
+  Success: True
+  Error: 
+  Articles: 2
+    - Did Iron Age Britons remove brains of the dead?
+
+[4/7] BBC News (bbc_news)
+  URL: https://feeds.bbci.co.uk/news/technology/rss.xml
+  Enabled: True
+  Time: 10.0s
+  Success: False
+  Error: 请求超时
+  Articles: 0
+
+[5/7] Hacker News (hacker_news)
+  URL: https://hacker-news.firebaseio.com/v0
+  Enabled: True
+  Time: 152.8s
+  Success: False
+  Error: 未匹配到相关文章
+  Articles: 0
+
+[6/7] Reddit (r/technology) (reddit)
+  URL: https://www.reddit.com/r/technology/hot/.json
+  Enabled: True
+  Time: 10.0s
+  Success: False
+  Error: 请求超时
+  Articles: 0
+
+[7/7] Reuters Technology (reuters)
+  URL: https://www.reuters.com/news/archive/technology
+  Enabled: True
+  Time: 10.0s
+  Success: False
+  Error: 请求超时
+  Articles: 0
+
+=== All tests complete ===

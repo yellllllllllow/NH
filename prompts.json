@@ -1,0 +1,26 @@
+[
+  {
+    "id": "concise",
+    "name": "简洁摘要",
+    "content": "请用2-3句话简洁概括以下新闻内容，突出核心信息。\n\n{article_text}",
+    "description": "简洁明了，适用于快速浏览"
+  },
+  {
+    "id": "detailed",
+    "name": "详细分析",
+    "content": "请详细分析以下新闻，包括：1) 核心事件 2) 背景信息 3) 潜在影响。\n\n{article_text}",
+    "description": "深入分析，适用于深度阅读"
+  },
+  {
+    "id": "chinese",
+    "name": "中文翻译摘要",
+    "content": "请将以下英文新闻翻译成中文，并用3-4句话概括核心内容。\n\n{article_text}",
+    "description": "中英翻译+摘要，适用于非英语用户"
+  },
+  {
+    "id": "keypoints",
+    "name": "要点列表",
+    "content": "请将以下新闻提炼为3-5个关键要点，用列表形式输出。\n\n{article_text}",
+    "description": "要点式阅读，快速获取关键信息"
+  }
+]
